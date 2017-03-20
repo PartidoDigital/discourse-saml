@@ -116,8 +116,8 @@ if request_method == 'post'
     <body onload="document.forms[0].submit()">
       <noscript>
         <p>
-          <strong>Note:</strong> Since your browser does not support JavaScript,
-          you must press the Continue button once to proceed.
+          <strong>Nota:</strong>Ya que tu navegador no soporta JavaScript,
+          necesitas apretar una vez el siguient botón "Continuar" para proceder.
         </p>
       </noscript>
       <form action="#{GlobalSetting.saml_target_url}" method="post">
@@ -126,7 +126,7 @@ if request_method == 'post'
         </div>
         <noscript>
           <div>
-            <input type="submit" value="Continue"/>
+            <input type="submit" value="Continuar"/>
           </div>
         </noscript>
       </form>
@@ -151,7 +151,7 @@ button_title = GlobalSetting.try(:saml_button_title) || GlobalSetting.try(:saml_
 
 auth_provider :title => button_title,
               :authenticator => SamlAuthenticator.new('saml'),
-              :message => "Authorizing with #{title} (make sure pop up blockers are not enabled)",
+              :message => "Autentificando con #{title} (asegurate que cualquier bloqueador de ventanas emergentes no este activado)",
               :frame_width => 600,
               :frame_height => 380,
               :background_color => '#003366',
